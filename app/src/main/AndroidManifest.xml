@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nourah.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".splash_screen"
+            android:theme="@style/Fullscreen" />
+        <activity android:name=".profile" />
+        <activity android:name=".login" />
+        <activity android:name=".registration" />
+        <activity android:name=".projectspage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".contact_us" />
+        <activity android:name=".settings" />
+        <activity android:name=".account" />
+        <activity android:name=".search" />
+        <activity android:name=".y2017" />
+        <activity android:name=".y2016" />
+        <activity android:name=".p1_y2017" />
+        <activity android:name=".pop_up_pass" />
+        <activity android:name=".y2015" />
+        <activity android:name=".y2014" />
+        <activity android:name=".y2013" />
+        <activity android:name=".y2012" />
+        <activity android:name=".y2011" />
+        <activity android:name=".projects.english_language" />
+        <activity android:name=".projects.prophet" />
+        <activity android:name=".projects.Arrangement_words" />
+        <activity android:name=".projects.four_questions" />
+        <activity android:name=".projects.learn_play" />
+        <activity android:name=".projects.pharmacy_managment_system" />
+        <activity android:name=".projects.guess_secret" />
+        <activity android:name=".projects.optical_memory_speed" />
+        <activity android:name=".projects.diet_center" />
+        <activity android:name=".projects.ace_arcade" />
+        <activity android:name=".projects.art_gallery" />
+        <activity android:name=".projects.game_focus" />
+        <activity android:name=".projects.task_organaizer" />
+    </application>
+
+</manifest>

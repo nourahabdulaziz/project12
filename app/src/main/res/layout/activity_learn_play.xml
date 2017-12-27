@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nourah.myapplication.projects.learn_play">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/learn_play" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6d4e81"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Learn &amp; play"
+        android:layout_marginBottom="58dp"
+        android:layout_above="@+id/textView2"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginStart="11dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+
+        android:text="This app is a educational game for kids, help to learn about color and shapes in interesting way by using sounds and photos and videos..
+this game help all kids to learn and especially Children with autism..
+This game has two phases first to learn a color and second to play.
+" />
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="400sp"
+        android:layout_height="300sp"
+        android:onClick="videoplay"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+</RelativeLayout>
+
+
