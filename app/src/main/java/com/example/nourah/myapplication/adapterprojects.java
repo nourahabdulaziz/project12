@@ -35,17 +35,14 @@ public class adapterprojects extends ArrayAdapter<String> {
 
     public View getView(final int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        Log.d("rr", "t9");
 
         View rowView = inflater.inflate(R.layout.list, null, true);
-        Log.d("rr", "t5");
 
         final TextView txtTitle = (TextView) rowView.findViewById(R.id.item);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
 
 
         txtTitle.setText(itemname[position]);
-        Log.d("rr", "t7");
 
         imageView.setImageResource(imgid[position]);
 

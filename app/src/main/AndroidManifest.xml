@@ -4,17 +4,18 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/logo"
+        android:label="Projects Library"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".splash_screen"
             android:theme="@style/Fullscreen" />
         <activity android:name=".profile" />
-        <activity android:name=".login" />
-        <activity android:name=".registration" />
+        <activity android:name=".login" >
+        </activity>
+        <activity android:name=".registration" >
+        </activity>
         <activity android:name=".projectspage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +29,6 @@
         <activity android:name=".search" />
         <activity android:name=".y2017" />
         <activity android:name=".y2016" />
-        <activity android:name=".p1_y2017" />
         <activity android:name=".pop_up_pass" />
         <activity android:name=".y2015" />
         <activity android:name=".y2014" />
@@ -37,7 +37,7 @@
         <activity android:name=".y2011" />
         <activity android:name=".projects.english_language" />
         <activity android:name=".projects.prophet" />
-        <activity android:name=".projects.Arrangement_words" />
+        <activity android:name=".Arrangement_words" />
         <activity android:name=".projects.four_questions" />
         <activity android:name=".projects.learn_play" />
         <activity android:name=".projects.pharmacy_managment_system" />

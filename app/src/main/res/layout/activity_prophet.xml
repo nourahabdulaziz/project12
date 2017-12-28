@@ -15,7 +15,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#6d4e81"
+        android:textColor="#7a747e"
         android:textStyle="bold"
         android:layout_marginTop="35dp"
         android:text="Questions about the Prophet"

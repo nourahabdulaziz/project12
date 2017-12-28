@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 
 public class account extends AppCompatActivity {
-EditText email,pass,username;
+    EditText email,pass,fname;
     SharedPreferences sh;
     SharedPreferences.Editor editor;
     String e,n;
@@ -34,19 +34,18 @@ EditText email,pass,username;
         setContentView(R.layout.activity_account);
         openHelper = new dblogreg(this);
         db = openHelper.getWritableDatabase();
+        db = openHelper.getReadableDatabase();
 
-
-        email = (EditText) findViewById(R.id.editText1);
-        pass = (EditText) findViewById(R.id.editText2);
-        username = (EditText) findViewById(R.id.editText3);
+        email = (EditText) findViewById(R.id.editemail);
+        pass = (EditText) findViewById(R.id.editpassword);
+        fname = (EditText) findViewById(R.id.editfname);
         sh=getSharedPreferences(login.MyPREFERENCES, Context.MODE_PRIVATE);
         pass.setOnTouchListener(handle);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         email.setText(sh.getString("email",null));
         pass.setText(sh.getString("pass",null));
-        username.setText(sh.getString("name",null));
+        fname.setText(sh.getString("name",null));
 
          editor = sh.edit();
 
@@ -64,13 +63,13 @@ EditText email,pass,username;
 
         });
 
-        username.addTextChangedListener(new TextWatcher() {
+        fname.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {}
 
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                n=username.getText().toString();}
+                n=fname.getText().toString();}
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 menu.findItem(R.id.done).setEnabled(true);
@@ -84,11 +83,8 @@ EditText email,pass,username;
     public boolean onOptionsItemSelected(MenuItem item){
         int id=item.getItemId();
 
-        if(id==android.R.id.home){
-            this.finish();
-        }
         if(id==R.id.done){
-          after(username);
+          after(fname);
           after(email);
           this.finish();
         }
@@ -120,30 +116,23 @@ EditText email,pass,username;
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void after(View v) {
+    public void after(View  v) {
 
-        if (v == username) {
+        if (v == fname) {
 
-            Toast.makeText(getApplicationContext(), sh.getString("name", null), Toast.LENGTH_SHORT).show();
-            db.execSQL("update " + dblogreg.TABLE_NAME + " set " + dblogreg.COL_FNAME + "='" + username.getText().toString() +
-                    "' where " + dblogreg.COL_FNAME + "='" + n + "';");
+            db.execSQL("update " + dblogreg.TABLE_NAME + " set " + dblogreg.COL_FNAME + "='" + fname.getText().toString() +
+                    "' where " + dblogreg.COL_EMAIL + "='" + e + "';");
 
-            Log.d("test", username.getText().toString());
-
-            editor.putString("name", username.getText().toString());
+            editor.putString("name", fname.getText().toString());
+            Toast.makeText(getApplicationContext(), fname.getText().toString(), Toast.LENGTH_SHORT).show();
             editor.commit();
-            //Log.d("test",it1);
         }
 
         if (v == email) {
 
-            Toast.makeText(getApplicationContext(), sh.getString("email", null), Toast.LENGTH_SHORT).show();
-            Log.d("test", "stert method ");
             db.execSQL("update " + dblogreg.TABLE_NAME + " set " + dblogreg.COL_EMAIL + "='" + email.getText().toString() +
                     "' where " + dblogreg.COL_EMAIL + "='" + e + "';");
 
-            Log.d("test", email.getText().toString());
-            Log.d("test", "after update");
 
             editor.putString("email", email.getText().toString());
             editor.commit();

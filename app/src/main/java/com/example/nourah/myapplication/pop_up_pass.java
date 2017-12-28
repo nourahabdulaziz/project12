@@ -1,6 +1,5 @@
 package com.example.nourah.myapplication;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
@@ -22,7 +21,6 @@ public class pop_up_pass extends AppCompatActivity  {
     TextView error;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("test", "start  pop up window");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop_up_pass);
@@ -35,7 +33,7 @@ public class pop_up_pass extends AppCompatActivity  {
         change = (Button) findViewById(R.id.button1);
         cancle = (Button) findViewById(R.id.button2);
         error = (TextView) findViewById(R.id.textView2);
-        Log.d("test", "in pop up window");
+
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getRealMetrics(dm);
 

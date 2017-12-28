@@ -22,8 +22,6 @@ public class english_language extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("test", "create menu ");
-
 
         setContentView(R.layout.activity_english_language);
         t1=(TextView)findViewById(R.id.textView) ;

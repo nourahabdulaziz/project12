@@ -18,7 +18,6 @@ import com.example.nourah.myapplication.R;
 public class prophet extends AppCompatActivity {
     TextView t1,t2;
     Menu menu;
-    Button clk;
     VideoView vi;
 
     @Override
@@ -27,8 +26,6 @@ public class prophet extends AppCompatActivity {
         Log.d("test", "create menu ");
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("go back");
         setContentView(R.layout.activity_prophet);
         t1=(TextView)findViewById(R.id.textView) ;
         t2=(TextView)findViewById(R.id.textView2) ;
@@ -53,10 +50,6 @@ public class prophet extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id=item.getItemId();
 
-        if(id==android.R.id.home){
-
-            this.finish();
-        }
         if(id==R.id.share){
 
             Intent intent=new Intent(Intent.ACTION_SEND);

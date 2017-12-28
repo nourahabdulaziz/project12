@@ -26,7 +26,6 @@ public class pharmacy_managment_system extends AppCompatActivity {
 
         t1=(TextView)findViewById(R.id.textView) ;
         t2=(TextView)findViewById(R.id.textView2) ;
-        //getWindow().setFormat(PixelFormat.UNKNOWN);
         vi = (VideoView) findViewById(videoView);
         String vidiop = "android.resource://"+getApplicationContext().getPackageName()+"/"+R.raw.pahrmacy;
         Uri uri2 = Uri.parse(vidiop);

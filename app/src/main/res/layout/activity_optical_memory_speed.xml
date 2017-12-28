@@ -15,14 +15,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#6d4e81"
+        android:textColor="#7a747e"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="54dp"
         android:text="Optical Memory Speed Game"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_marginStart="15dp" />
+        android:layout_toEndOf="@+id/imageView" />
     <TextView android:id="@+id/textView2"
         android:layout_width="300dp"
         android:layout_height="100dp"

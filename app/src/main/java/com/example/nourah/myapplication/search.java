@@ -124,11 +124,7 @@ public class search extends AppCompatActivity {
             @Override
 
             public boolean onQueryTextSubmit(String query) {
-                // if(query.contains("prophet")){
-                //  Intent i = new Intent(search.this, settings.class);
-                //startActivityForResult(i, 0);
-                //  startActivity(i);
-                //}
+
 
                 return true;
             }

@@ -36,8 +36,6 @@ public class y2016 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("go back");
 
         setContentView(R.layout.activity_y2016);
 
@@ -75,15 +73,4 @@ public class y2016 extends AppCompatActivity {
 
             }
         });
-    }
-
-
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id=item.getItemId();
-
-        if(id==android.R.id.home){
-            this.finish();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }}
+  }}

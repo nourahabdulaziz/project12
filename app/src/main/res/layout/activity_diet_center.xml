@@ -14,12 +14,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#6d4e81"
+        android:textColor="#7a747e"
         android:textStyle="bold"
+        android:textSize="20sp"
         android:text="Diet Center"
-        android:layout_above="@+id/textView2"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp" />
+        android:layout_marginTop="35dp" />
     <TextView android:id="@+id/textView2"
         android:layout_width="300dp"
         android:layout_height="150dp"

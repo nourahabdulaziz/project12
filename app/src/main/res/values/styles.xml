@@ -25,9 +25,11 @@
         parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@color/background</item>
         <item name="background">@color/background</item>
+        <item name="windowActionBar">@null</item>
+
     </style>
 
     <color name="winBackground">#98cb4a</color>
-    <color name="background">#b666409c</color>
+    <color name="background">#9f8faf</color>
 
 </resources>
